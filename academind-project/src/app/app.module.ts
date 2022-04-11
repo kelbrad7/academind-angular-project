@@ -10,6 +10,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ElementRef } from '@angular/core';
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    DropdownDirective,
 
   ],
   imports: [
