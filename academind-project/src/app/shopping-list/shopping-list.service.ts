@@ -29,7 +29,4 @@ ingredientsChanged = new EventEmitter<Ingredient[]>();
 
   }
 
-
-
-  constructor() { }
 }
