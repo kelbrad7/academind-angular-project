@@ -9,9 +9,5 @@ import { AppRoutingModule } from './app-routing.module';
 
 })
 export class AppComponent {
-loadedFeature = 'recipe';
 
-  onNavigate (feature: string) {
-this.loadedFeature = feature;
-  }
 }
