@@ -1,9 +1,10 @@
 import { Component,
-  ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+  ElementRef, OnDestroy, OnInit, ViewChild, TemplateRef} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list.service';
+import { FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -40,8 +41,19 @@ editedItem: Ingredient;
       else {
         this.slservice.addIngredient(newIngredient)
       }
+      this.editMode = false;
+      form.reset();
     }
 
+    onClear(){
+      this.slForm.reset();
+        this.editMode = false;
+    }
+
+    onDelete(){
+      this.slservice.deleteIngredient(this.editedItemIndex)
+      this.onClear();
+    }
 
   ngOnDestroy(): void {
 

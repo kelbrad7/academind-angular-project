@@ -15,6 +15,8 @@ import { FormsModule, NgModel } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RecipeService } from './recipes/recipe.service';
 
 
 @NgModule({
@@ -35,9 +37,11 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+
   ],
-  providers: [],
+  providers: [RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
